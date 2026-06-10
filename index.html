@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xiller01 | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f0f2f5;
+      color: #111;
+      transition: 0.3s;
+    }
+
+    /* DARK MODE */
+    .dark {
+      background: #121212;
+      color: white;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #1877f2;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #1877f2, #00c6ff);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+    }
+
+    .hero p {
+      margin-top: 10px;
+    }
+
+    .btn {
+      margin-top: 15px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: white;
+      color: #1877f2;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #1877f2;
+    }
+
+    /* SKILLS */
+    .skill {
+      margin: 10px 0;
+    }
+
+    .bar {
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 10px;
+      background: #1877f2;
+    }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .dark .card {
+      background: #1e1e1e;
+    }
+
+    /* CONTACT */
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button.submit {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1877f2;
+      color: white;
+      margin-top: 20px;
+    }
+    .social-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: #1877f2;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+}
+    /* Avatar Animation */
+.hero img {
+animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+0% {
+transform: translateY(0px);
+}
+
+50% {
+transform: translateY(-12px);
+}
+
+100% {
+transform: translateY(0px);
+}
+}
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div><b>Xiller01</b></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="btn" onclick="toggleDark()">🌙</button>
+  </div>
+</nav>
+
+<!-- HERO --><div class="hero"><img src="avatar.png" alt="Xiller01" style="width:140px;height:140px;border-radius:50%;
+border:5px solid white;object-fit:cover;
+box-shadow:0 0 25px rgba(0,0,0,0.35);
+margin-bottom:20px;">
+
+<h1>👋 Hello, I'm Xiller01</h1><p style="font-size:20px; margin-top:10px;">
+  Future Full-Stack Developer 💻
+</p><p style="margin-top:10px;">
+  Building modern websites with HTML, CSS & JavaScript
+</p><button class="btn"
+onclick="document.getElementById('contact').scrollIntoView()">
+🚀 Hire Me
+</button>
+
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am learning web development and building modern websites step by step.
+    My goal is to become a professional full-stack developer.
+  </p>
+</section>
+<section>
+  <h2>Follow Me</h2>
+
+  <a href="#" class="social-btn">📘 Facebook</a>
+  <a href="#" class="social-btn">💻 GitHub</a>
+  <a href="#" class="social-btn">🎵 TikTok</a>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skill">HTML
+    <div class="bar"><div class="fill" style="width: 90%"></div></div>
+  </div>
+
+  <div class="skill">CSS
+    <div class="bar"><div class="fill" style="width: 80%"></div></div>
+  </div>
+
+  <div class="skill">JavaScript
+    <div class="bar"><div class="fill" style="width: 65%"></div></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects">
+
+    <div class="card">
+  🌐 Portfolio Website<br>
+  <small>My personal developer portfolio</small>
+</div><div class="card">
+  👍 Like Button App<br>
+  <small>Interactive button using HTML & CSS</small>
+</div><div class="card">
+  👤 Facebook Mini Profile<br>
+  <small>Facebook style profile page design</small>
+</div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <input id="name" placeholder="Your Name">
+  <input id="email" placeholder="Your Email">
+  <textarea id="msg" placeholder="Message"></textarea>
+
+  <button class="submit" onclick="sendMsg()">Send</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <h3>Xiller01 🚀</h3>
+  <p>Future Full-Stack Developer</p>
+  <p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script>
+  function toggleDark() {
+    document.body.classList.toggle("dark");
+  }
+
+  function sendMsg() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let msg = document.getElementById("msg").value;
+
+    if(name === "" || email === "" || msg === "") {
+      alert("Please fill all fields!");
+    } else {
+      alert("Message sent! (demo version)");
+    }
+  }
+</script>
+
+</body>
+  </html>
